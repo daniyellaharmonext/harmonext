@@ -1,0 +1,243 @@
+/* ── Page hero ── */
+.pageHero {
+  padding: calc(var(--nav-height) + 72px) var(--section-x) 80px;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-gold-border);
+}
+
+.pageHeroInner {
+  max-width: var(--max-width);
+}
+
+.heroHeading {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin: 12px 0 20px;
+  max-width: 560px;
+}
+
+.heroSub {
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 540px;
+  line-height: 1.72;
+  margin-bottom: 32px;
+}
+
+.heroCta {
+  display: inline-block;
+  padding: 14px 30px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  background-color: var(--color-gold);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--ease-fast), transform var(--ease-fast);
+}
+
+.heroCta:hover {
+  background-color: #a8903d;
+  transform: translateY(-2px);
+}
+
+/* ── Service block ── */
+.serviceSection {
+  padding: var(--section-y) var(--section-x);
+  position: relative;
+}
+
+.serviceSection:nth-child(even) {
+  background-color: var(--color-surface);
+}
+
+.serviceInner {
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.serviceLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.serviceTag {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  opacity: 0.2;
+  line-height: 1;
+  display: block;
+}
+
+.serviceTitle {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  margin-top: -8px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.blockLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.blockText {
+  font-size: 0.975rem;
+  color: #333;
+  line-height: 1.78;
+}
+
+.serviceRight {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: calc(var(--nav-height) + 24px);
+}
+
+/* Outcomes card */
+.outcomesCard {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+}
+
+.serviceSection:nth-child(even) .outcomesCard {
+  background-color: #ffffff;
+}
+
+.outcomesLabel {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 20px;
+}
+
+.outcomesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.outcomeItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #222;
+  line-height: 1.55;
+}
+
+.outcomeIcon {
+  color: var(--color-gold);
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+/* Callout box */
+.callout {
+  background-color: var(--color-gold-light);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 20px 22px;
+}
+
+.calloutLabel {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 8px;
+}
+
+.calloutText {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.65;
+  font-style: italic;
+  font-family: var(--font-heading);
+}
+
+/* Section divider */
+.divider {
+  position: absolute;
+  bottom: 0;
+  left: var(--section-x);
+  right: var(--section-x);
+  height: 1px;
+  background-color: var(--color-gold-border);
+}
+
+/* ── CTA ── */
+.ctaSection {
+  padding: var(--section-y) var(--section-x);
+  background-color: #0e0e0e;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ctaInner {
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ctaHeading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: #ffffff;
+}
+
+.ctaCopy {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.62);
+  max-width: 500px;
+}
+
+.ctaBtn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 16px 36px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  background-color: var(--color-gold);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--ease-fast), transform var(--ease-fast);
+}
+
+.ctaBtn:hover {
+  background-color: #a8903d;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .serviceInner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .serviceRight {
+    position: static;
+  }
+}

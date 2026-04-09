@@ -1,0 +1,40 @@
+:root {
+  /* ── Brand Colors ── */
+  --color-bg: #FAF9F6;
+  --color-text: #000000;
+  --color-gold: #BBA14F;
+  --color-gold-light: rgba(187, 161, 79, 0.10);
+  --color-gold-border: rgba(187, 161, 79, 0.22);
+  --color-surface: #F0EEE9;
+  --color-surface-alt: #E8E5DE;
+  --color-muted: #555555;
+  --color-dark: #111111;
+
+  /* ── Typography ── */
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', 'Lato', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ── Sizing & Layout ── */
+  --nav-height: 76px;
+  --max-width: 1180px;
+  --section-y: 108px;
+  --section-x: 24px;
+
+  /* ── Shadows ── */
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.11);
+
+  /* ── Transitions ── */
+  --ease-fast: 0.18s ease;
+  --ease-base: 0.32s ease;
+  --ease-slow: 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ── Border Radius ── */
+  --radius-sm: 3px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  /* ── Breakpoints (for reference in comments) ── */
+  /* mobile: <640px | tablet: 640–1024px | desktop: >1024px */
+}

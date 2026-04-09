@@ -1,0 +1,208 @@
+/* ── Page hero ── */
+.pageHero {
+  padding: calc(var(--nav-height) + 72px) var(--section-x) 80px;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-gold-border);
+}
+
+.pageHeroInner {
+  max-width: var(--max-width);
+}
+
+.heroHeading {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin: 12px 0 20px;
+}
+
+.heroSub {
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 560px;
+  line-height: 1.72;
+}
+
+/* ── Industry section ── */
+.industrySection {
+  padding: var(--section-y) var(--section-x);
+  position: relative;
+}
+
+.industrySection.alt {
+  background-color: var(--color-surface);
+}
+
+.industryInner {
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+/* Left: content */
+.industryLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.industryIconWrap {
+  width: 44px;
+  height: 44px;
+  color: var(--color-gold);
+}
+
+.industryName {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.industryTagline {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+.industryDesc {
+  font-size: 0.975rem;
+  color: #333;
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.howBlock {
+  margin-top: 8px;
+  padding: 20px 24px;
+  background-color: var(--color-gold-light);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.howLabel {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 8px;
+}
+
+.howText {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Right: pain points card */
+.industryRight {
+  position: sticky;
+  top: calc(var(--nav-height) + 24px);
+}
+
+.painCard {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gold-border);
+  padding: 36px 32px;
+}
+
+.industrySection.alt .painCard {
+  background-color: #ffffff;
+}
+
+.painLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 20px;
+}
+
+.painList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.painItem {
+  display: flex;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.55;
+}
+
+.painIcon {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  font-weight: 300;
+  opacity: 0.6;
+}
+
+/* Section divider */
+.divider {
+  position: absolute;
+  bottom: 0;
+  left: var(--section-x);
+  right: var(--section-x);
+  height: 1px;
+  background-color: var(--color-gold-border);
+}
+
+/* ── CTA ── */
+.ctaSection {
+  padding: var(--section-y) var(--section-x);
+  background-color: #0e0e0e;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ctaInner {
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ctaHeading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: #ffffff;
+}
+
+.ctaCopy {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.62);
+  max-width: 500px;
+}
+
+.ctaBtn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 16px 36px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  background-color: var(--color-gold);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--ease-fast), transform var(--ease-fast);
+}
+
+.ctaBtn:hover {
+  background-color: #a8903d;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .industryInner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .industryRight {
+    position: static;
+  }
+}

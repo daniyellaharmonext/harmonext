@@ -1,0 +1,354 @@
+/* ── Page hero ── */
+.pageHero {
+  padding: calc(var(--nav-height) + 72px) var(--section-x) 80px;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-gold-border);
+}
+
+.pageHeroInner {
+  max-width: var(--max-width);
+}
+
+.heroHeading {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  margin: 12px 0 20px;
+  max-width: 600px;
+}
+
+.heroSub {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 560px;
+  line-height: 1.72;
+}
+
+/* ── Mission & Vision ── */
+.missionSection {
+  padding: var(--section-y) var(--section-x);
+}
+
+.missionGrid {
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.missionCard {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 48px 40px;
+  border-top: 3px solid var(--color-gold);
+}
+
+.missionLabel {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 14px;
+}
+
+.missionHeading {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.missionText {
+  font-size: 0.975rem;
+  color: #444;
+  line-height: 1.75;
+}
+
+/* ── Why section ── */
+.whySection {
+  padding: var(--section-y) var(--section-x);
+  background-color: var(--color-surface);
+}
+
+.whyInner {
+  max-width: var(--max-width);
+}
+
+.whyContent {
+  max-width: 720px;
+}
+
+.sectionHeading {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin: 12px 0 28px;
+}
+
+.whyText {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+/* ── Core values ── */
+.valuesSection {
+  padding: var(--section-y) var(--section-x);
+}
+
+.valuesInner {
+  max-width: var(--max-width);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.valueCard {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform var(--ease-base), box-shadow var(--ease-base);
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.valueNumber {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  opacity: 0.4;
+  line-height: 1;
+}
+
+.valueTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.valueDesc {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+/* ── Leadership Team ── */
+.teamSection {
+  padding: var(--section-y) var(--section-x);
+  background-color: var(--color-surface);
+}
+
+.teamInner {
+  max-width: var(--max-width);
+}
+
+.teamIntro {
+  font-size: 1rem;
+  color: #444;
+  margin-top: -16px;
+  margin-bottom: 48px;
+  font-style: italic;
+  font-family: var(--font-heading);
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.teamCard {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  border: 1px solid transparent;
+  transition: border-color var(--ease-base), transform var(--ease-base), box-shadow var(--ease-base);
+}
+
+.teamCard:hover {
+  border-color: var(--color-gold-border);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Avatar placeholder — TODO: replace with actual headshot image */
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold-border));
+  border: 2px solid var(--color-gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-gold);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.teamInfo {
+  flex: 1;
+}
+
+.memberName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.memberRole {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 12px;
+}
+
+.memberBio {
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+/* Org diagram */
+.orgWrap {
+  margin-top: 64px;
+  padding: 48px 40px;
+  background-color: var(--color-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gold-border);
+}
+
+.orgLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.orgDiagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.orgLevel {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.orgNode {
+  padding: 12px 24px;
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  background-color: var(--color-surface);
+  white-space: nowrap;
+}
+
+.orgRoot {
+  background-color: var(--color-gold-light);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.orgConnector {
+  width: 1px;
+  height: 28px;
+  background-color: var(--color-gold-border);
+}
+
+/* ── CTA ── */
+.ctaSection {
+  padding: var(--section-y) var(--section-x);
+  background-color: #0e0e0e;
+  color: #ffffff;
+  text-align: center;
+}
+
+.ctaInner {
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ctaHeading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: #ffffff;
+}
+
+.ctaCopy {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.62);
+  max-width: 500px;
+}
+
+.ctaBtn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 16px 36px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  background-color: var(--color-gold);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--ease-fast), transform var(--ease-fast);
+}
+
+.ctaBtn:hover {
+  background-color: #a8903d;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .missionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .orgLevel {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teamCard {
+    flex-direction: column;
+  }
+}

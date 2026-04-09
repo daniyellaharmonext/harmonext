@@ -1,0 +1,228 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color var(--ease-base), box-shadow var(--ease-base);
+}
+
+/* Solid background + shadow after scroll */
+.nav.scrolled {
+  background-color: var(--color-bg);
+  box-shadow: 0 1px 0 var(--color-gold-border), var(--shadow-sm);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-x);
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* ── Logo ── */
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.logoHarmo {
+  color: #888888;
+}
+
+.logoNext {
+  color: var(--color-gold);
+}
+
+/* ── Desktop links ── */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 6px 10px;
+  position: relative;
+  transition: color var(--ease-fast);
+  white-space: nowrap;
+}
+
+/* When nav is scrolled, links go dark */
+.nav.scrolled .link {
+  color: var(--color-text);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 10px;
+  right: 10px;
+  height: 1px;
+  background-color: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--ease-base);
+}
+
+.link:hover::after,
+.link.active::after {
+  transform: scaleX(1);
+}
+
+.link:hover {
+  color: var(--color-gold);
+}
+
+.link.active {
+  color: var(--color-gold);
+}
+
+.nav.scrolled .link:hover,
+.nav.scrolled .link.active {
+  color: var(--color-gold);
+}
+
+/* CTA button in nav */
+.cta {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 9px 18px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: 1.5px solid var(--color-gold);
+  color: var(--color-gold);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--ease-fast), color var(--ease-fast);
+  white-space: nowrap;
+}
+
+.cta:hover {
+  background-color: var(--color-gold);
+  color: #ffffff;
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: #ffffff;
+  transition: transform var(--ease-base), opacity var(--ease-fast);
+  transform-origin: center;
+}
+
+.nav.scrolled .bar {
+  background-color: var(--color-text);
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+/* ── Mobile Drawer ── */
+.drawer {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: calc(var(--nav-height) + 24px) 24px 48px;
+  transform: translateY(-100%);
+  transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: -1; /* behind nav bar */
+}
+
+.drawer.drawerOpen {
+  transform: translateY(0);
+}
+
+.drawerLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.drawerLink {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-text);
+  padding: 10px 0;
+  text-align: center;
+  transition: color var(--ease-fast);
+}
+
+.drawerLink:hover,
+.drawerLink.active {
+  color: var(--color-gold);
+}
+
+.drawerCta {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 32px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border: 1.5px solid var(--color-gold);
+  color: var(--color-gold);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--ease-fast), color var(--ease-fast);
+}
+
+.drawerCta:hover {
+  background-color: var(--color-gold);
+  color: #ffffff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

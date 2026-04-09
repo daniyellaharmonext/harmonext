@@ -1,0 +1,240 @@
+/* ── Page hero ── */
+.pageHero {
+  padding: calc(var(--nav-height) + 72px) var(--section-x) 80px;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-gold-border);
+}
+
+.pageHeroInner {
+  max-width: var(--max-width);
+}
+
+.heroHeading {
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+  margin: 12px 0 20px;
+}
+
+.heroSub {
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+/* ── Principles banner ── */
+.principles {
+  background-color: #0e0e0e;
+  padding: 48px var(--section-x);
+}
+
+.principlesInner {
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.principle {
+  background-color: #0e0e0e;
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.principleLabel {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-gold);
+  font-weight: 600;
+}
+
+.principleText {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.65;
+}
+
+/* ── Phases ── */
+.phases {
+  padding: var(--section-y) var(--section-x);
+}
+
+.phasesInner {
+  max-width: var(--max-width);
+}
+
+.sectionHeading {
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  margin: 12px 0 64px;
+}
+
+/* Timeline layout */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.phaseReveal {
+  width: 100%;
+}
+
+.phaseItem {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  position: relative;
+}
+
+/* Left column: number + vertical line */
+.phaseLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phaseNumber {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--color-gold);
+  background-color: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.connector {
+  flex: 1;
+  width: 1px;
+  min-height: 40px;
+  background-color: var(--color-gold-border);
+  margin: 4px 0;
+}
+
+/* Right column: icon + text */
+.phaseContent {
+  padding-bottom: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.phaseItem:last-child .phaseContent {
+  padding-bottom: 0;
+}
+
+.phaseIcon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-gold);
+  margin-top: 12px;
+}
+
+.phaseName {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-top: -4px;
+}
+
+.phaseDesc {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.78;
+  max-width: 680px;
+}
+
+/* ── SAFe callout ── */
+.safeSection {
+  padding: var(--section-y) var(--section-x);
+  background-color: var(--color-surface);
+}
+
+.safeInner {
+  max-width: var(--max-width);
+}
+
+.safeCard {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-gold-border);
+  padding: 64px 72px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.safeEyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.safeHeading {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+}
+
+.safeText {
+  font-size: 0.975rem;
+  color: #444;
+  line-height: 1.8;
+  max-width: 640px;
+}
+
+.safeBtn {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  letter-spacing: 0.04em;
+  transition: letter-spacing var(--ease-fast);
+}
+
+.safeBtn:hover {
+  letter-spacing: 0.07em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .principlesInner {
+    grid-template-columns: 1fr;
+  }
+
+  .phaseItem {
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+  }
+
+  .safeCard {
+    padding: 44px 32px;
+  }
+}
+
+@media (max-width: 560px) {
+  .phaseItem {
+    grid-template-columns: 44px 1fr;
+    gap: 16px;
+  }
+
+  .phaseNumber {
+    width: 44px;
+    height: 44px;
+    font-size: 0.75rem;
+  }
+}

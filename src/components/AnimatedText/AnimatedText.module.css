@@ -1,0 +1,18 @@
+.phrase {
+  display: inline-block;
+  color: var(--color-gold);
+  animation: phraseEnter 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes phraseEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
