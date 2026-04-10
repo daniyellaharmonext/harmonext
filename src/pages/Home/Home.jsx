@@ -21,7 +21,7 @@ const SERVICES = [
     ),
     title: 'PM & Delivery',
     description: 'End-to-end project and program management using Agile and SAFe frameworks. We deliver on time, on scope, and on budget.',
-    link: '/services',
+    link: '/services#pm',
   },
   {
     icon: (
@@ -31,7 +31,7 @@ const SERVICES = [
     ),
     title: 'Engineering',
     description: 'Product development and technical delivery that bridges vision and execution — built to scale.',
-    link: '/services',
+    link: '/services#engineering',
   },
   {
     icon: (
@@ -41,7 +41,7 @@ const SERVICES = [
     ),
     title: 'Strategy & Innovation',
     description: 'Digital strategy and roadmaps that align technology investment with business outcomes and long-term growth.',
-    link: '/services',
+    link: '/services#strategy',
   },
   {
     icon: (
@@ -51,7 +51,7 @@ const SERVICES = [
     ),
     title: 'QA & Governance',
     description: 'Structured quality assurance and release governance that ensures every deployment is controlled, tested, and compliant.',
-    link: '/services',
+    link: '/services#qa',
   },
 ];
 

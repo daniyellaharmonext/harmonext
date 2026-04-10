@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import SectionReveal from '../../components/SectionReveal/SectionReveal.jsx';
 import styles from './Services.module.css';
 
@@ -123,7 +124,16 @@ const CheckIcon = () => (
   </svg>
 );
 
-const Services = () => (
+const Services = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+    const el = document.querySelector(hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [hash]);
+
+  return (
   <>
     {/* ── Page hero ── */}
     <section className={styles.pageHero}>
@@ -203,6 +213,7 @@ const Services = () => (
       </div>
     </section>
   </>
-);
+  );
+};
 
 export default Services;
