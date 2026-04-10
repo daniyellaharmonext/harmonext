@@ -94,7 +94,7 @@ const Home = () => (
           playsInline
           aria-hidden="true"
         >
-          <source src="/downloads/office.mp4" type="video/mp4" />
+          <source src="/assets/hero-video.mp4" type="video/mp4" />
         </video>
         {/* Dark overlay — keeps text readable over any video content */}
         <div className={styles.videoOverlay} aria-hidden="true" />

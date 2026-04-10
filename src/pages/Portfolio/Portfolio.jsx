@@ -151,7 +151,7 @@ const Portfolio = () => (
 
         <div className={styles.caseGrid}>
           {ADDITIONAL.map((cs, i) => (
-            <SectionReveal key={cs.id} delay={i * 100}>
+            <SectionReveal key={cs.id} delay={i * 100} className={styles.cardReveal}>
               <article className={styles.caseCard}>
                 <div className={styles.caseCardHeader}>
                   <span className={styles.caseTag}>{cs.tag}</span>

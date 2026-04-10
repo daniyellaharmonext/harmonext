@@ -130,7 +130,7 @@ const Contact = () => {
           <h1 className={styles.heroHeading}>Request a Consultation</h1>
           <p className={styles.heroSub}>
             Tell us about your project. We&apos;ll review your submission and follow up
-            within one business day to schedule a conversation.
+            to schedule a conversation.
           </p>
         </div>
       </section>
@@ -148,7 +148,7 @@ const Contact = () => {
                   <h2 className={styles.successHeading}>Submission Received</h2>
                   <p className={styles.successText}>
                     Thank you for reaching out. A member of the HarmoNext team will review
-                    your project details and be in touch within one business day.
+                    your project details and get in touch.
                   </p>
                   <button
                     className={styles.resetBtn}
@@ -386,7 +386,7 @@ const Contact = () => {
                 <span className={styles.infoLabel}>Location</span>
                 {/* TODO: Replace with real location */}
                 <span className={styles.infoText}>
-                  Washington, DC Metropolitan Area
+                  Houston, Texas
                 </span>
               </div>
             </div>
@@ -396,7 +396,7 @@ const Contact = () => {
               <ol className={styles.expectList}>
                 <li className={styles.expectItem}>
                   <span className={styles.expectNum}>01</span>
-                  <span>We review your submission and assess fit within 1 business day.</span>
+                  <span>We review your submission and assess your fit.</span>
                 </li>
                 <li className={styles.expectItem}>
                   <span className={styles.expectNum}>02</span>
