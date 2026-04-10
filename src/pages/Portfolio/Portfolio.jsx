@@ -9,7 +9,7 @@ import styles from './Portfolio.module.css';
 ────────────────────────────────────────────────────────── */
 const FEATURED = {
   tag: 'Featured Case Study',
-  client: 'Fabel',
+  client: 'Social Media Marketing Platform',
   headline: 'An AI Operating System for Creators Who Want to Build Influence Without Burning Out.',
   industry: 'Creator Economy / AI',
   engagement: 'Product Strategy · Engineering · Delivery',
