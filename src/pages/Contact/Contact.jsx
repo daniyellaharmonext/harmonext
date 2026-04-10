@@ -2,6 +2,8 @@ import { useState } from 'react';
 import SectionReveal from '../../components/SectionReveal/SectionReveal.jsx';
 import styles from './Contact.module.css';
 
+const SUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/info@harmonext.com';
+
 const PROJECT_TYPES = [
   'Select a service...',
   'PM & Delivery',
@@ -52,6 +54,8 @@ const Contact = () => {
   const [form, setForm] = useState(INITIAL_FORM);
   const [errors, setErrors] = useState(INITIAL_ERRORS);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validate = () => {
     const errs = { ...INITIAL_ERRORS };
@@ -102,16 +106,42 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
 
-    /* TODO: Connect to a real form backend (e.g. Formspree, EmailJS, or a custom API endpoint).
-       Replace this console.log with your submission logic. */
-    console.log('Form submitted:', form);
+    setSubmitting(true);
+    setSubmitError('');
 
-    setSubmitted(true);
-    setForm(INITIAL_FORM);
+    try {
+      const res = await fetch(SUBMIT_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: form.fullName,
+          email: form.email,
+          organization: form.organization,
+          'project-type': form.projectType,
+          budget: form.budget || 'Not specified',
+          timeline: form.timeline || 'Not specified',
+          message: form.message,
+          _subject: `New Consultation Request from ${form.fullName} — ${form.projectType}`,
+          _captcha: 'false',
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error || `Submission failed (${res.status})`);
+      }
+
+      setSubmitted(true);
+      setForm(INITIAL_FORM);
+    } catch (err) {
+      setSubmitError(err.message || 'Something went wrong. Please try again or email us directly.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   /* LinkedIn SVG */
@@ -342,9 +372,13 @@ const Contact = () => {
                     )}
                   </div>
 
-                  <button type="submit" className={styles.submitBtn}>
-                    Submit Request
+                  <button type="submit" className={styles.submitBtn} disabled={submitting}>
+                    {submitting ? 'Sending…' : 'Submit Request'}
                   </button>
+
+                  {submitError && (
+                    <p className={styles.submitErrorMsg} role="alert">{submitError}</p>
+                  )}
 
                   <p className={styles.formNote}>
                     Fields marked <span aria-hidden="true">*</span> are required.
