@@ -14,8 +14,7 @@ const FEATURED = {
   industry: 'Creator Economy / AI',
   engagement: 'Product Strategy · Engineering · Delivery',
   problem: `Content creators are drowning in tools, tabs, and tasks. Despite the explosion of AI,
-  most solutions add complexity rather than reducing it — leaving creators more burned out than
-  before. This was conceived to solve a specific problem: how do you systematically build
+  most solutions add complexity rather than reducing it — leaving creators more burned out than before. This was conceived to solve a specific problem: how do you systematically build
   influence without systematic exhaustion?`,
   approach: `HarmoNext led the engagement from concept to shipped product. We started with a
   discovery sprint to validate the core value proposition with real creators, then built a
