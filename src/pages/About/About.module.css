@@ -34,7 +34,12 @@
   gap: 32px;
 }
 
+.cardReveal {
+  height: 100%;
+}
+
 .missionCard {
+  height: 100%;
   background-color: var(--color-surface);
   border-radius: var(--radius-md);
   padding: 48px 40px;
@@ -72,8 +77,27 @@
   max-width: var(--max-width);
 }
 
+.whyLayout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 64px;
+  align-items: center;
+}
+
 .whyContent {
-  max-width: 720px;
+  max-width: 640px;
+}
+
+.whyImageWrap {
+  flex-shrink: 0;
+}
+
+.whyImage {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
 }
 
 .sectionHeading {
@@ -105,6 +129,7 @@
 }
 
 .valueCard {
+  height: 100%;
   background-color: var(--color-surface);
   border-radius: var(--radius-md);
   padding: 36px 28px;
@@ -165,6 +190,7 @@
 }
 
 .teamCard {
+  height: 100%;
   background-color: var(--color-bg);
   border-radius: var(--radius-md);
   padding: 36px;
@@ -181,20 +207,12 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Avatar placeholder — TODO: replace with actual headshot image */
 .avatar {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-gold-light), var(--color-gold-border));
+  object-fit: cover;
   border: 2px solid var(--color-gold-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  color: var(--color-gold);
-  font-weight: 600;
   flex-shrink: 0;
 }
 
@@ -327,6 +345,14 @@
 @media (max-width: 860px) {
   .missionGrid {
     grid-template-columns: 1fr;
+  }
+
+  .whyLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .whyImage {
+    height: 280px;
   }
 
   .valuesGrid {

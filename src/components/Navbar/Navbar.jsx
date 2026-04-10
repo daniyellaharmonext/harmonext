@@ -12,16 +12,8 @@ const NAV_LINKS = [
 ];
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-
-  // Apply background once user has scrolled past hero
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 56);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   // Close mobile menu on route change
   useEffect(() => {
@@ -36,7 +28,6 @@ const Navbar = () => {
 
   const navClass = [
     styles.nav,
-    scrolled ? styles.scrolled : '',
     menuOpen ? styles.menuActive : '',
   ].filter(Boolean).join(' ');
 

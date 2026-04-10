@@ -103,11 +103,11 @@ const Home = () => (
       <div className={styles.heroContent}>
         <p className={styles.heroEyebrow}>Strategy &amp; Technology Consultancy</p>
         <h1 className={styles.heroHeading}>
-          We Build.{' '}
+          We Plan.{' '}
           <br className={styles.desktopBreak} />
-          We Deliver.{' '}
+          We Execute.{' '}
           <br className={styles.desktopBreak} />
-          We Lead.
+          We Deliver.
         </h1>
         <p className={styles.heroSub}>
           <AnimatedText phrases={HERO_PHRASES} interval={3000} />

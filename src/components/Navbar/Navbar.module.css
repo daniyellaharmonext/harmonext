@@ -4,11 +4,6 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: background-color var(--ease-base), box-shadow var(--ease-base);
-}
-
-/* Solid background + shadow after scroll */
-.nav.scrolled {
   background-color: var(--color-bg);
   box-shadow: 0 1px 0 var(--color-gold-border), var(--shadow-sm);
 }
@@ -54,16 +49,11 @@
 .link {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--color-text);
   padding: 6px 10px;
   position: relative;
   transition: color var(--ease-fast);
   white-space: nowrap;
-}
-
-/* When nav is scrolled, links go dark */
-.nav.scrolled .link {
-  color: var(--color-text);
 }
 
 .link::after {
@@ -89,11 +79,6 @@
 }
 
 .link.active {
-  color: var(--color-gold);
-}
-
-.nav.scrolled .link:hover,
-.nav.scrolled .link.active {
   color: var(--color-gold);
 }
 
@@ -133,13 +118,9 @@
   display: block;
   width: 100%;
   height: 1.5px;
-  background-color: #ffffff;
+  background-color: var(--color-text);
   transition: transform var(--ease-base), opacity var(--ease-fast);
   transform-origin: center;
-}
-
-.nav.scrolled .bar {
-  background-color: var(--color-text);
 }
 
 .hamburger.open .bar:nth-child(1) {

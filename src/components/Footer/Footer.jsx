@@ -77,7 +77,7 @@ const Footer = () => (
         <h4 className={styles.colHeading}>Get In Touch</h4>
         {/* TODO: replace with real contact details */}
         <p className={styles.contactItem}>info@harmonext.com</p>
-        <p className={styles.contactItem}>Washington, DC Metropolitan Area</p>
+        <p className={styles.contactItem}>Houston, Texas</p>
         <Link to="/contact" className={styles.consultBtn}>
           Schedule a Consultation
         </Link>
