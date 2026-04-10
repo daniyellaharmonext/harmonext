@@ -77,11 +77,11 @@ const About = () => (
       <div className={`container ${styles.pageHeroInner}`}>
         <p className="section-label">Our Story</p>
         <h1 className={styles.heroHeading}>
-          Built by Sisters.<br />Built for Excellence.
+          Delivering with<br /> Clarity and Purpose.
         </h1>
         <p className={styles.heroSub}>
-          HarmoNext is a boutique strategy and technology consultancy founded
-          by four sisters who believe that great delivery is both an art and a science.
+          At HarmonExt, we believe successful projects are built on structure, communication, and intentional execution. 
+          We partner with organizations to manage and deliver initiatives from start to finish—bringing alignment to teams, visibility to progress, and confidence to outcomes.
         </p>
       </div>
     </section>
