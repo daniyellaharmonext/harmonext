@@ -13,15 +13,10 @@ const FEATURED = {
   headline: 'An AI Operating System for Creators Who Want to Build Influence Without Burning Out.',
   industry: 'Creator Economy / AI',
   engagement: 'Product Strategy · Engineering · Delivery',
-  problem: `Content creators are drowning in tools, tabs, and tasks. Despite the explosion of AI,
-  most solutions add complexity rather than reducing it — leaving creators more burned out than before. This was conceived to solve a specific problem: how do you systematically build
+  problem: `Content creators are drowning in tools, tabs, and tasks. Despite the explosion of AI, most solutions add complexity rather than reducing it — leaving creators more burned out than before. This was conceived to solve a specific problem: how do you systematically build
   influence without systematic exhaustion?`,
-  approach: `HarmoNext led the engagement from concept to shipped product. We started with a
-  discovery sprint to validate the core value proposition with real creators, then built a
-  product roadmap that sequenced MVP features by impact and technical feasibility. Our
-  engineering team designed the system architecture and led full-stack development, while our
-  PM and BA embedded with the founding team to manage scope, sprint execution, and
-  stakeholder communication throughout.`,
+  approach: `HarmoNext led the engagement from concept to shipped product. We started with a discovery sprint to validate the core value proposition with real creators, then built a product roadmap that sequenced MVP features by impact and technical feasibility. Our
+  engineering team designed the system architecture and led full-stack development, while our PM and BA embedded with the founding team to manage scope, sprint execution, and stakeholder communication throughout.`,
   outcomes: [
     { metric: '14 Weeks', label: 'MVP shipped from first discovery call to market-ready product' },
     { metric: '3,000+', label: 'Creators onboarded in private beta within 60 days of launch' },
